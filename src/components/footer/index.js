@@ -1,10 +1,11 @@
 import React,{Component} from 'react'
+import './index.less'
 
 export default class Footer extends Component{
    
     render(){
         return(
-            <div >
+            <div className='Footer' >
             Footer
             </div>
         )
