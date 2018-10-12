@@ -3,7 +3,8 @@ import {HashRouter,Route,Switch} from 'react-router-dom'
 import Home from '../views/home/index'
 import NotMatch from '../views/notMatch/index'
 import Admin from '../views/admin/index'
-import SecondPage from '../views/secondPage/index'
+import Order from '../views/order/index'
+import Test from '../views/test/index'
 
 export default class Router extends Component{
     constructor(props){
@@ -17,9 +18,11 @@ export default class Router extends Component{
                         <Route path='/' render={()=>
                            <Admin>
                                <Switch>
+                               <Route path='/admin/test' component={Test} ></Route>
                                <Route path='/admin/home' component={Home} ></Route>
-                               <Route path='/admin/secondpage' component={SecondPage} ></Route>
+                               <Route path='/admin/order' component={Order} ></Route>
                                <Route  component={NotMatch} ></Route>
+                               
                                </Switch>
                            </Admin>
                         }></Route>
