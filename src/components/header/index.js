@@ -3,10 +3,11 @@ import {Link} from 'react-router-dom'
 import './index.less'
 import utils from '../../utils/index'
 import axios from 'axios'
+import {connect} from 'react-redux'
 
 const formDate = utils.formDate
 
-export default class Header extends Component{
+ class Header extends Component{
 
     state={
         time:'没错，这就是时间',
@@ -54,7 +55,7 @@ export default class Header extends Component{
                 </div>
                 <div className='weather-wrap clearfix' >
                     <div className='breadcrumb-box fll' >
-                        首页
+                        {this.props.MuneText.menuItemText}
                     </div>
                     <div className='weather-box flr clearfix' >
                         <div className="date fll" >
@@ -69,3 +70,11 @@ export default class Header extends Component{
         )
     }
 }
+
+export default connect(
+    function mapStateToProps(state){
+        return{
+            MuneText: state
+        }
+    }
+)(Header)

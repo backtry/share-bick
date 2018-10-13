@@ -209,7 +209,15 @@ class orderPage extends Component{
     }
     //跳转到订单详情页
     handleOrderDetial=()=>{
-        
+        let item = this.state.selectedItem
+        if(!item){
+            Modal.info({
+                title: '提示',
+                content: '请选择一个订单'
+            })
+        }else{
+            window.open(`/#/common/order/detail/${item[0].id}`)
+        }
     }
     //--------------------------------生命钩子-----------------------------
     componentWillMount(){
