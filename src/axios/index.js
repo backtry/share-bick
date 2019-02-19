@@ -1,6 +1,4 @@
 import axios from 'axios'
-import { resolve } from 'url';
-import { rejects } from 'assert';
 export default class Axios{
     static instance=axios.create({
         baseURL:'https://www.easy-mock.com/mock/5bbb8bf854d6771eb592838d',

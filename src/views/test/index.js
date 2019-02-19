@@ -1,20 +1,33 @@
 import React, { Component } from 'react'
+import { Carousel } from 'antd'
+import './index.less'
 
-// // 引入 ECharts 主模块
-// import echarts from 'echarts/lib/echarts';
-// // 引入柱状图
-// import  'echarts/lib/chart/bar';
-// // 引入提示框和标题组件
-// import 'echarts/lib/component/tooltip';
-// import 'echarts/lib/component/title';
+import img_1 from '../../style/images/swarp/01.jpg'
+import img_2 from '../../style/images/swarp/02.jpg'
+import img_3 from '../../style/images/swarp/03.jpg'
+import img_4 from '../../style/images/swarp/04.jpg'
 
-export default class test extends Component {
-    
+export default class Test extends Component {
   render() {
     return (
-      <div>
-          <h1>我是测试页</h1>
-          <p>echarts-for-react</p>
+      <div className='test-box'>
+        <div className='carousel-container' >
+          <Carousel className='carousel'
+            effect={'scrollx'}
+            autoplay={true} 
+            dots={true}
+            easing={"ease"}
+          >
+            <div><img src={img_1} className='carouse-img' /></div>    
+            <div><img src={img_2} className='carouse-img' /></div>
+            <div><img src={img_3} className='carouse-img' /></div>
+            <div><img src={img_4} className='carouse-img' /></div>
+            {/* <div className='carouse-img-box1'></div>
+            <div className='carouse-img-box2'></div>
+            <div className='carouse-img-box3'></div>
+            <div className='carouse-img-box4'></div> */}
+          </Carousel>    
+        </div>    
       </div>
     )
   }

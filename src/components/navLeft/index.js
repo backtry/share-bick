@@ -1,5 +1,5 @@
 import React,{Component} from 'react'
-import { Menu, Icon, Button } from 'antd';
+import { Menu, Icon,} from 'antd';
 import {Link} from 'react-router-dom'
 import './index.less'
 import {connect} from 'react-redux'
@@ -7,7 +7,7 @@ import {bindActionCreators} from 'redux'
 import action from '../../redux/action/index'
 
 const SubMenu = Menu.SubMenu;
-const MenuItemGroup = Menu.ItemGroup;
+// const MenuItemGroup = Menu.ItemGroup;
 
 class NavLeft extends Component{
     state = {

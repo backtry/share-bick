@@ -1,5 +1,5 @@
 import React,{Component} from 'react'
-import { Form, Icon, Input,Card,Button,Cascader,Select,DatePicker,Table,Modal,message   } from 'antd';
+import { Form,Card,Button,Select,DatePicker,Table,Modal,message} from 'antd';
 import axios from '../../axios/index'
 import './index.less'
 
@@ -200,7 +200,7 @@ class orderPage extends Component{
             visible:false    
         },()=>{
             axios.get('order/finish_order',{id}).then(res=>{
-                if(res.code == 0){
+                if(res.code === 0){
                     message.success('删除订单成功');
                     _this.getTableData()    
                 }

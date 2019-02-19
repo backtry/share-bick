@@ -18,6 +18,7 @@ export default class Router extends Component{
             <HashRouter>
                 <div>
                     <Switch>
+                        <Route path='/test' component={Test} ></Route>
                         <Route path='/common/order/detail/:id' component={OrderDetail}></Route>
                         <Route path='/' render={()=>
                            <Admin>

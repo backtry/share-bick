@@ -90,7 +90,7 @@ export default class OrderMap extends Component {
     getOrderData=()=>{
         const id= this.props.match.params.id 
         axios.get('/order/detail',{id:id}).then(res=>{
-            if(res.code==0){
+            if(res.code===0){
                 console.log(res)
                 this.initMap(res.result)
                 this.setState({
@@ -123,7 +123,7 @@ export default class OrderMap extends Component {
                             <ul>
                                 <li>
                                     <span className="info-left">用车模式:</span>
-                                    <span className="info-right">{info.mode == 1 ? '服务区': '停车点'}</span>
+                                    <span className="info-right">{info.mode === 1 ? '服务区': '停车点'}</span>
                                 </li>
                                 <li>
                                     <span className="info-left">订单编号:</span>
